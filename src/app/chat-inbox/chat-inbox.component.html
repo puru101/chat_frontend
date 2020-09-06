@@ -1,0 +1,50 @@
+
+<div class="chat-messages">
+  <div id="users-list">
+    <ul class="chat-messages-show-list"  *ngFor="let user of userList" >
+      <li *ngIf="user.user_id!=loginUser.user_id" (click)="selectUser(user)">{{user.username}}</li>
+      
+    </ul>
+  </div>
+
+</div>
+
+<div class="pure-g container">
+  <div id="cg-reservation" class="pure-u-1 cg-reservation_past"> 
+    <section class="cg-reservation-comments">   
+       <div class="cg-reservation-comments-wrap" id="message-list" >   
+     
+    </div>
+
+
+      <div class="cg-comments-textarea">
+        <!-- <textarea name="" id="" placeholder="Type in comments to send to receiver"></textarea> -->
+        <input class="chat-messages-create-input" type="text" [(ngModel)]="message">
+        <button [disabled]="isButtonDisable" tabindex="1" (click)="SendMessage()" class="ovx-btn size-small">Subscribe</button>      
+      </div>
+    </section>
+  </div>
+</div>
+
+
+
+   <!-- <div *ngIf="chatBox; then thenBlock else elseBlock">    
+   </div>
+   <ng-template #thenBlock>
+    
+    <div class="chat-messages-show-container">
+      <ul class="chat-messages-show-list" id="message-list">        
+       <!-- <li  *ngFor="let reply of replyList" >{{reply.reply}}</li> -->
+     
+    <!--  </ul></div>
+
+     <div class="chat-messages-create-container"  > 
+
+  </div>
+</ng-template>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template> --> 
+
+
+   
+
+   
